@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Table from "react-bootstrap/Table";
-import QuizTableRow from "./QuizTableRow";
+import MarkTableRow from "./MarkTableRow";
 
-export default class QuizList extends Component {
+export default class MarkList extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -13,7 +13,7 @@ export default class QuizList extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:8070/quizs/")
+      .get("http://localhost:8070/marks/")
       .then((res) => {
         this.setState({
           returns: res.data,
@@ -26,7 +26,7 @@ export default class QuizList extends Component {
 
   DataTable() {
     return this.state.returns.map((res, i) => {
-      return <QuizTableRow obj={res} key={i} />;
+      return <MarkTableRow obj={res} key={i} />;
     });
   }
 
@@ -40,7 +40,7 @@ export default class QuizList extends Component {
   handleTextSearch = (e) => {
     console.log(e.currentTarget.value);
     const searchTerm = e.currentTarget.value;
-    axios.get("http://localhost:8070/quizs/").then((res) => {
+    axios.get("http://localhost:8070/marks/").then((res) => {
       const returns = res.data;
       this.setState({ returns });
       this.filterContent(returns, searchTerm);
@@ -55,7 +55,7 @@ export default class QuizList extends Component {
         <br />
         <h2>
           {" "}
-          <i class="bi bi-question-circle"></i>&nbsp;QUESTIONS
+          <i class="bi bi-question-circle"></i>&nbsp;MARKS
         </h2>
         <br />
         <form className="md-3">
@@ -71,13 +71,10 @@ export default class QuizList extends Component {
         <Table striped bordered hover variant="dark">
           <thead>
             <tr>
-              <th>Question Number</th>
-              <th>Question</th>
-              <th>Answer 01</th>
-              <th>Answer 02</th>
-              <th>Answer 03</th>
-              <th>Answer 04</th>
-              <th>Corret Answer</th>
+              <th>Student ID</th>
+              <th>Student Name</th>
+              <th>Marks</th>
+              <th>Status</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -85,11 +82,11 @@ export default class QuizList extends Component {
         </Table>
         <button className="btn btn-success">
           <a
-            href="/create-quiz"
+            href="/create-mark"
             style={{ textDecoration: "none", color: "white" }}
           >
             {" "}
-            <i class="fas fa-book"></i>&nbsp;Add Question
+            <i class="fas fa-book"></i>&nbsp;Add Marks
           </a>
         </button>
         &nbsp; &nbsp;

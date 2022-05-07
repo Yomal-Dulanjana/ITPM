@@ -12,6 +12,10 @@ import CreateQuiz from "./components/create-quiz.component";
 import EditQuiz from "./components/edit-quiz.component";
 import QuizList from "./components/quiz-list.component";
 
+import CreateMark from "./components/create-mark.component";
+import EditMark from "./components/edit-mark.component";
+import MarkList from "./components/mark-list.component";
+
 
 function App() {
   return (
@@ -210,6 +214,11 @@ function App() {
                 <Route path="/create-quiz" component={CreateQuiz} />
                 <Route path="/edit-quiz/:id" component={EditQuiz} />
                 <Route path="/quiz-list" component={QuizList} />
+
+                <Route exact path="/" component={CreateMark} />
+                <Route path="/create-mark" component={CreateMark} />
+                <Route path="/edit-mark/:id" component={EditMark} />
+                <Route path="/mark-list" component={MarkList} />
               </Switch>
             </div>
           </Col>
