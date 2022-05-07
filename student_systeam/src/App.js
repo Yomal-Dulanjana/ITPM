@@ -13,7 +13,7 @@ import EditQuiz from "./components/edit-quiz.component";
 import QuizList from "./components/quiz-list.component";
 import CreateSubject from "./components/create-subject.component";
 import EditSubject from "./components/edit-subject.component";
-import SubjectList from "./components/quiz-list.component";
+import SubjectList from "./components/subject-list.component";
 
 
 function App() {
