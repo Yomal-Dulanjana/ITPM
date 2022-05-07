@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
-import './css/return.css'
+
 
 export default class CreateSubject extends Component {
 
@@ -75,17 +75,17 @@ export default class CreateSubject extends Component {
 
         <Form.Group controlId="Sname">
           <Form.Label>Subject Name</Form.Label>
-          <Form.Control type="sname" value={this.state.sname} onChange={this.onChangeSubjectSname}  required />
+          <Form.Control type="sname" style={{width: "370px"}} value={this.state.sname} onChange={this.onChangeSubjectSname}  required />
         </Form.Group>
 
         <Form.Group controlId="Scode">
           <Form.Label>Subject Code</Form.Label>
-          <Form.Control type="scode" value={this.state.scode} onChange={this.onChangeSubjectScode}  required />
+          <Form.Control type="scode" style={{width: "370px"}} value={this.state.scode} onChange={this.onChangeSubjectScode}  required />
         </Form.Group>
 
         <Form.Group controlId="Tname">
           <Form.Label>Teacher's Name</Form.Label>
-          <Form.Control type="tname" value={this.state.tname} onChange={this.onChangeSubjectTname}  required />
+          <Form.Control type="tname" style={{width: "370px"}} value={this.state.tname} onChange={this.onChangeSubjectTname}  required />
         </Form.Group>
 
         <Form.Group controlId="Class">
