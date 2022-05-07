@@ -11,6 +11,9 @@ import home from "./home";
 import CreateQuiz from "./components/create-quiz.component";
 import EditQuiz from "./components/edit-quiz.component";
 import QuizList from "./components/quiz-list.component";
+import CreateSubject from "./components/create-subject.component";
+import EditSubject from "./components/edit-subject.component";
+import SubjectList from "./components/quiz-list.component";
 
 
 function App() {
@@ -178,10 +181,10 @@ function App() {
                   <br />
                   <a
                     className="nav-link active"
-                    href="/return-list"
+                    href="/subject-list"
                     style={{ color: "#000000" }}
                   >
-                    <h5>Return</h5>
+                    <h5>Subject</h5>
                   </a>
                   <br />
                   <a
@@ -210,6 +213,10 @@ function App() {
                 <Route path="/create-quiz" component={CreateQuiz} />
                 <Route path="/edit-quiz/:id" component={EditQuiz} />
                 <Route path="/quiz-list" component={QuizList} />
+                <Route exact path="/" component={CreateSubject} />
+                <Route path="/create-subject" component={CreateSubject} />
+                <Route path="/edit-subject/:id" component={EditSubject} />
+                <Route path="/subject-list" component={SubjectList} />
               </Switch>
             </div>
           </Col>
