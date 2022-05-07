@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(cors());
-app.use('/quizes', quizRoute)
+app.use('/quizs', quizRoute)
 
 // PORT
 const port = process.env.PORT || 8070;
