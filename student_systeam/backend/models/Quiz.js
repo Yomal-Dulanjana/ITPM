@@ -34,7 +34,7 @@ let quizSchema = new Schema(
   },
 
   {
-    collection: "Quiz",
+    collection: "quizs",
   }
 );
 
