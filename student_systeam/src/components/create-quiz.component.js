@@ -135,7 +135,7 @@ export default class CreateQuiz extends Component {
         
         <br/>
         <Button variant="success" size="lg" block="block" type="submit" > 
-        <i class="fas fa-book"></i>&nbsp; Add Question
+        <i class="btn btn-primary"></i>&nbsp; Add Question
         </Button>
         
         <br>
