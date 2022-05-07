@@ -4,7 +4,7 @@ let mongoose = require('mongoose'),
 
 const { Component } = require('react');
 // subject Model
-let returnSchema = require('../models/Subject');
+let subjectSchema = require('../models/Subject');
 
 // CREATE subject
 router.route('/create-subject').post((req, res, next) => {
