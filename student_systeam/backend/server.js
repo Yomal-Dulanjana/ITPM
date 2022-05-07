@@ -6,7 +6,6 @@ let dbConfig = require('./database/db');
 
 // Express Rout
 const quizRoute = require('../backend/routes/quiz.route')
-const subjectRoute = require('../backend/routes/subject.route')
 
 // Connecting mongoDB
 mongoose.Promise = global.Promise;
@@ -25,8 +24,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(cors());
-app.use('/quizes', quizRoute)
-app.use('/subjects', subjectRoute)
+app.use('/quizs', quizRoute)
 
 // PORT
 const port = process.env.PORT || 8070;
