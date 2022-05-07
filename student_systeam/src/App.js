@@ -11,9 +11,10 @@ import home from "./home";
 import CreateQuiz from "./components/create-quiz.component";
 import EditQuiz from "./components/edit-quiz.component";
 import QuizList from "./components/quiz-list.component";
-import CreateSubject from "./components/create-subject.component";
-import EditSubject from "./components/edit-subject.component";
-import SubjectList from "./components/subject-list.component";
+
+import CreateMark from "./components/create-mark.component";
+import EditMark from "./components/edit-mark.component";
+import MarkList from "./components/mark-list.component";
 
 
 function App() {
@@ -181,10 +182,10 @@ function App() {
                   <br />
                   <a
                     className="nav-link active"
-                    href="/subject-list"
+                    href="/return-list"
                     style={{ color: "#000000" }}
                   >
-                    <h5>Subject</h5>
+                    <h5>Return</h5>
                   </a>
                   <br />
                   <a
@@ -213,10 +214,11 @@ function App() {
                 <Route path="/create-quiz" component={CreateQuiz} />
                 <Route path="/edit-quiz/:id" component={EditQuiz} />
                 <Route path="/quiz-list" component={QuizList} />
-                <Route exact path="/" component={CreateSubject} />
-                <Route path="/create-subject" component={CreateSubject} />
-                <Route path="/edit-subject/:id" component={EditSubject} />
-                <Route path="/subject-list" component={SubjectList} />
+
+                <Route exact path="/" component={CreateMark} />
+                <Route path="/create-mark" component={CreateMark} />
+                <Route path="/edit-mark/:id" component={EditMark} />
+                <Route path="/mark-list" component={MarkList} />
               </Switch>
             </div>
           </Col>
