@@ -34,11 +34,12 @@ export default class SubjectTableRow extends Component {
                 <td>
                     <Link className="edit-link" to={"/edit-subject/" + this.props.obj._id}>
                     <i class="fas fa-edit"></i>
-                        Edit
+                    &nbsp;  Edit
                     </Link>
+                    &emsp;&emsp;
                     <Button onClick={this.deleteSubject} size="vh" variant="outline-danger">
                     <i class="far fa-trash-alt"></i>  
-                        Delete</Button>
+                       &nbsp; Delete</Button>
                 </td>
             </tr>
 

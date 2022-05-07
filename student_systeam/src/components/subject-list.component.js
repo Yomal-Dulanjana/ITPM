@@ -77,10 +77,10 @@ export default class SubjectList extends Component {
           {this.DataTable()}
         </tbody>
       </Table>
-      <button className="btn btn-success"><a href="/create-return" style={{textDecoration:'none',color:'white'}}><i class="fas fa-undo"></i>&nbsp;Add Subject</a></button>
+      <button className="btn btn-success"><a href="/create-subject" style={{textDecoration:'none',color:'white'}}><i class="fas fa-undo"></i>&nbsp;Add Subject</a></button>
       &nbsp;
       &nbsp;
-      <button className="btn btn-success"><a href="/returnPDF" style={{textDecoration:'none',color:'white'}}><i class="fas fa-book"></i>&nbsp;Genarate Report</a></button>
+      <button className="btn btn-success"><a href="/subjectPDF" style={{textDecoration:'none',color:'white'}}><i class="fas fa-book"></i>&nbsp;Genarate Report</a></button>
     </div>);
   }
 }
