@@ -11,6 +11,9 @@ const timeRoute = require('../backend/routes/time.route')
 const markRoute = require('../backend/routes/mark.route')
 const examRoute = require('./routes/exam.route')
 const gradeRoute = require('./routes/grade.route')
+const teacherRoute = require('../backend/routes/teacher.route')
+const studentRoute = require('../backend/routes/student.route')
+
 
 
 // Connecting mongoDB
@@ -36,6 +39,9 @@ app.use('/time',timeRoute)
 app.use('/marks', markRoute)
 app.use('/exams', examRoute)
 app.use('/grades', gradeRoute)
+app.use('/teachers', teacherRoute)
+app.use('/students', studentRoute)
+
 
 
 // PORT

@@ -31,6 +31,16 @@ import EditGrade from "./components/edit-grade.component";
 import GradeList from "./components/grade-list.component";
 import gradePDF from "./components/gradePDF";
 
+import CreateTeacher from "./components/create-teacher.component";
+import EditTeacher from "./components/edit-teacher.component";
+import TeacherList from "./components/teacher-list.component";
+import teacherPDF from "./components/teacherPDF";
+
+import CreateStudent from "./components/create-student.component";
+import EditStudent from "./components/edit-student.component";
+import StudentList from "./components/student-list.component";
+import studentPDF from "./components/studentPDF";
+
 
 function App() {
   return (
@@ -246,15 +256,31 @@ function App() {
                 <Route path="/edit-grade/:id" component={EditGrade} />
                 <Route path="/Grade-list" component={GradeList} />
                 <Route path="/gradePDF" component={gradePDF} />
+
                 <Route exact path="/" component={CreateSubject} />
                 <Route path="/create-subject" component={CreateSubject} />
                 <Route path="/edit-subject/:id" component={EditSubject} />
                 <Route path="/subject-list" component={SubjectList} />
+                
                 <Route exact path="/" component={CreateTime} />
                 <Route path="/create-time" component={CreateTime} />
                 <Route path="/edit-time/:id" component={EditTime} />
                 <Route path="/time-list" component={TimeList} />
                 <Route path="/timePDF" component={timePDF} />
+
+                <Route exact path='/' component={CreateStudent} />
+                <Route path="/create-student" component={CreateStudent} />
+                <Route path="/edit-student/:id" component={EditStudent} />
+                <Route path="/student-list" component={StudentList} />
+                <Route path="/studentPDF" component={studentPDF} />
+
+                <Route exact path='/' component={CreateTeacher} />
+                <Route path="/create-teacher" component={CreateTeacher} />
+                <Route path="/edit-teacher/:id" component={EditTeacher} />
+                <Route path="/teacher-list" component={TeacherList} />      
+                <Route path="/teacherPDF" component={teacherPDF} /> 
+                 
+
 
               </Switch>
             </div>
