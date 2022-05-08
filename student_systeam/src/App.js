@@ -12,9 +12,14 @@ import CreateQuiz from "./components/create-quiz.component";
 import EditQuiz from "./components/edit-quiz.component";
 import QuizList from "./components/quiz-list.component";
 
-import CreateMark from "./components/create-mark.component";
-import EditMark from "./components/edit-mark.component";
-import MarkList from "./components/mark-list.component";
+import CreateSubject from "./components/create-subject.component";
+import EditSubject from "./components/edit-subject.component";
+import SubjectList from "./components/subject-list.component";
+
+import CreateTime from "./components/create-time.component";
+import EditTime from "./components/edit-time.component";
+import TimeList from "./components/time-list.component";
+import timePDF from "./components/timePDF";
 
 
 function App() {
@@ -182,18 +187,18 @@ function App() {
                   <br />
                   <a
                     className="nav-link active"
-                    href="/return-list"
+                    href="/subject-list"
                     style={{ color: "#000000" }}
                   >
-                    <h5>Return</h5>
+                    <h5>Subject</h5>
                   </a>
                   <br />
                   <a
                     className="nav-link active"
-                    href="/supply-list"
+                    href="/time-list"
                     style={{ color: "#000000" }}
                   >
-                    <h5>Supplier</h5>
+                    <h5>Time Table</h5>
                   </a>
                   <br />
                 </div>
@@ -214,11 +219,15 @@ function App() {
                 <Route path="/create-quiz" component={CreateQuiz} />
                 <Route path="/edit-quiz/:id" component={EditQuiz} />
                 <Route path="/quiz-list" component={QuizList} />
-
-                <Route exact path="/" component={CreateMark} />
-                <Route path="/create-mark" component={CreateMark} />
-                <Route path="/edit-mark/:id" component={EditMark} />
-                <Route path="/mark-list" component={MarkList} />
+                <Route exact path="/" component={CreateSubject} />
+                <Route path="/create-subject" component={CreateSubject} />
+                <Route path="/edit-subject/:id" component={EditSubject} />
+                <Route path="/subject-list" component={SubjectList} />
+                <Route exact path="/" component={CreateTime} />
+                <Route path="/create-time" component={CreateTime} />
+                <Route path="/edit-time/:id" component={EditTime} />
+                <Route path="/time-list" component={TimeList} />
+                <Route path="/timePDF" component={timePDF} />
               </Switch>
             </div>
           </Col>
