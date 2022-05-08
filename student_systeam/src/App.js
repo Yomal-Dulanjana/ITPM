@@ -21,6 +21,16 @@ import EditTime from "./components/edit-time.component";
 import TimeList from "./components/time-list.component";
 import timePDF from "./components/timePDF";
 
+import CreateExam from "./components/create-exam.component";
+import EditExam from "./components/edit-exam.component";
+import ExamList from "./components/exam-list.component";
+import examPDF from "./components/examPDF";
+
+import CreateGrade from "./components/create-grade.component";
+import EditGrade from "./components/edit-grade.component";
+import GradeList from "./components/grade-list.component";
+import gradePDF from "./components/gradePDF";
+
 
 function App() {
   return (
@@ -219,6 +229,23 @@ function App() {
                 <Route path="/create-quiz" component={CreateQuiz} />
                 <Route path="/edit-quiz/:id" component={EditQuiz} />
                 <Route path="/quiz-list" component={QuizList} />
+
+                <Route exact path="/" component={CreateMark} />
+                <Route path="/create-mark" component={CreateMark} />
+                <Route path="/edit-mark/:id" component={EditMark} />
+                <Route path="/mark-list" component={MarkList} />
+
+                <Route exact path='/' component={CreateExam} />
+                <Route path="/create-exam" component={CreateExam} />
+                <Route path="/edit-exam/:id" component={EditExam} />
+                <Route path="/Exam-list" component={ExamList} />
+                <Route path="/examPDF" component={examPDF} />
+
+                <Route exact path='/' component={CreateGrade} />
+                <Route path="/create-grade" component={CreateGrade} />
+                <Route path="/edit-grade/:id" component={EditGrade} />
+                <Route path="/Grade-list" component={GradeList} />
+                <Route path="/gradePDF" component={gradePDF} />
                 <Route exact path="/" component={CreateSubject} />
                 <Route path="/create-subject" component={CreateSubject} />
                 <Route path="/edit-subject/:id" component={EditSubject} />
@@ -228,6 +255,7 @@ function App() {
                 <Route path="/edit-time/:id" component={EditTime} />
                 <Route path="/time-list" component={TimeList} />
                 <Route path="/timePDF" component={timePDF} />
+
               </Switch>
             </div>
           </Col>
