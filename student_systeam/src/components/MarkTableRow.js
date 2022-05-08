@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Button from 'react-bootstrap/Button';
 
-export default class QuizTableRow extends Component {
+export default class MarkTableRow extends Component {
 
     constructor(props) {
         super(props);
@@ -11,9 +11,9 @@ export default class QuizTableRow extends Component {
     }
 
     deleteQuiz() {
-        axios.delete('http://localhost:8070/quizs/delete-quiz/' + this.props.obj._id)
+        axios.delete('http://localhost:8070/marks/delete-mark/' + this.props.obj._id)
             .then((res) => {
-                alert('Quiz successfully deleted!')
+                alert('Mark successfully deleted!')
             }).catch((error) => {
                 console.log(error)
             })
@@ -26,13 +26,10 @@ export default class QuizTableRow extends Component {
 
             <tr>
                 
-                <td>{this.props.obj.question_number}</td>
-                <td>{this.props.obj.question}</td>
-                <td>{this.props.obj.answer_1}</td>
-                <td>{this.props.obj.answer_2}</td>
-                <td>{this.props.obj.answer_3}</td>
-                <td>{this.props.obj.answer_4}</td>
-                <td>{this.props.obj.corret_answer}</td>
+                <td>{this.props.obj.studentID}</td>
+                <td>{this.props.obj.name}</td>
+                <td>{this.props.obj.marks}</td>
+                <td>{this.props.obj.status}</td>
             
                 <td>
                     <Link className="edit-link" to={"/edit-quiz/" + this.props.obj._id}>
