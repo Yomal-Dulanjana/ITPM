@@ -9,6 +9,9 @@ const quizRoute = require('../backend/routes/quiz.route')
 const subjectRoute = require('../backend/routes/subject.route')
 const timeRoute = require('../backend/routes/time.route')
 const markRoute = require('../backend/routes/mark.route')
+const examRoute = require('./routes/exam.route')
+const gradeRoute = require('./routes/grade.route')
+
 
 // Connecting mongoDB
 mongoose.Promise = global.Promise;
@@ -31,6 +34,8 @@ app.use('/quizs', quizRoute)
 app.use('/subjects',subjectRoute)
 app.use('/time',timeRoute)
 app.use('/marks', markRoute)
+app.use('/exams', examRoute)
+app.use('/grades', gradeRoute)
 
 
 // PORT
