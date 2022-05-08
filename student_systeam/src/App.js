@@ -11,9 +11,15 @@ import home from "./home";
 import CreateQuiz from "./components/create-quiz.component";
 import EditQuiz from "./components/edit-quiz.component";
 import QuizList from "./components/quiz-list.component";
+
 import CreateSubject from "./components/create-subject.component";
 import EditSubject from "./components/edit-subject.component";
 import SubjectList from "./components/subject-list.component";
+
+import CreateTime from "./components/create-time.component";
+import EditTime from "./components/edit-time.component";
+import TimeList from "./components/time-list.component";
+import timePDF from "./components/timePDF";
 
 
 function App() {
@@ -189,10 +195,10 @@ function App() {
                   <br />
                   <a
                     className="nav-link active"
-                    href="/supply-list"
+                    href="/time-list"
                     style={{ color: "#000000" }}
                   >
-                    <h5>Supplier</h5>
+                    <h5>Time Table</h5>
                   </a>
                   <br />
                 </div>
@@ -217,6 +223,11 @@ function App() {
                 <Route path="/create-subject" component={CreateSubject} />
                 <Route path="/edit-subject/:id" component={EditSubject} />
                 <Route path="/subject-list" component={SubjectList} />
+                <Route exact path="/" component={CreateTime} />
+                <Route path="/create-time" component={CreateTime} />
+                <Route path="/edit-time/:id" component={EditTime} />
+                <Route path="/time-list" component={TimeList} />
+                <Route path="/timePDF" component={timePDF} />
               </Switch>
             </div>
           </Col>
