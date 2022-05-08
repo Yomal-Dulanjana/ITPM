@@ -16,6 +16,16 @@ import CreateMark from "./components/create-mark.component";
 import EditMark from "./components/edit-mark.component";
 import MarkList from "./components/mark-list.component";
 
+import CreateExam from "./components/create-exam.component";
+import EditExam from "./components/edit-exam.component";
+import ExamList from "./components/exam-list.component";
+import examPDF from "./components/examPDF";
+
+import CreateGrade from "./components/create-grade.component";
+import EditGrade from "./components/edit-grade.component";
+import GradeList from "./components/grade-list.component";
+import gradePDF from "./components/gradePDF";
+
 
 function App() {
   return (
@@ -219,6 +229,18 @@ function App() {
                 <Route path="/create-mark" component={CreateMark} />
                 <Route path="/edit-mark/:id" component={EditMark} />
                 <Route path="/mark-list" component={MarkList} />
+
+                <Route exact path='/' component={CreateExam} />
+                <Route path="/create-exam" component={CreateExam} />
+                <Route path="/edit-exam/:id" component={EditExam} />
+                <Route path="/Exam-list" component={ExamList} />
+                <Route path="/examPDF" component={examPDF} />
+
+                <Route exact path='/' component={CreateGrade} />
+                <Route path="/create-grade" component={CreateGrade} />
+                <Route path="/edit-grade/:id" component={EditGrade} />
+                <Route path="/Grade-list" component={GradeList} />
+                <Route path="/gradePDF" component={gradePDF} />
               </Switch>
             </div>
           </Col>

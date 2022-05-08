@@ -7,6 +7,9 @@ let dbConfig = require('./database/db');
 // Express Rout
 const quizRoute = require('../backend/routes/quiz.route')
 const markRoute = require('../backend/routes/mark.route')
+const examRoute = require('./routes/exam.route')
+const gradeRoute = require('./routes/grade.route')
+
 
 // Connecting mongoDB
 mongoose.Promise = global.Promise;
@@ -27,6 +30,8 @@ app.use(bodyParser.urlencoded({
 app.use(cors());
 app.use('/quizs', quizRoute)
 app.use('/marks', markRoute)
+app.use('/exams', examRoute)
+app.use('/grades', gradeRoute)
 
 // PORT
 const port = process.env.PORT || 8070;
