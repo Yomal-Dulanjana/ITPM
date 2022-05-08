@@ -12,6 +12,12 @@ import CreateQuiz from "./components/create-quiz.component";
 import EditQuiz from "./components/edit-quiz.component";
 import QuizList from "./components/quiz-list.component";
 
+
+import CreateMark from "./components/create-mark.component";
+import EditMark from "./components/edit-mark.component";
+import MarkList from "./components/mark-list.component";
+import markPDF from "./components/marksPDF";
+
 import CreateSubject from "./components/create-subject.component";
 import EditSubject from "./components/edit-subject.component";
 import SubjectList from "./components/subject-list.component";
@@ -40,6 +46,7 @@ import CreateStudent from "./components/create-student.component";
 import EditStudent from "./components/edit-student.component";
 import StudentList from "./components/student-list.component";
 import studentPDF from "./components/studentPDF";
+
 
 
 function App() {
@@ -245,6 +252,9 @@ function App() {
                 <Route path="/edit-mark/:id" component={EditMark} />
                 <Route path="/mark-list" component={MarkList} />
 
+                <Route path="/marksPDF" component={markPDF} />
+
+
                 <Route exact path='/' component={CreateExam} />
                 <Route path="/create-exam" component={CreateExam} />
                 <Route path="/edit-exam/:id" component={EditExam} />
@@ -280,6 +290,7 @@ function App() {
                 <Route path="/teacher-list" component={TeacherList} />      
                 <Route path="/teacherPDF" component={teacherPDF} /> 
                  
+
 
 
               </Switch>

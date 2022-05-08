@@ -93,6 +93,7 @@ export default class QuizList extends Component {
           </a>
         </button>
         &nbsp; &nbsp;
+        
       </div>
     );
   }

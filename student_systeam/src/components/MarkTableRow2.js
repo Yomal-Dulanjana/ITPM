@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+
 import axios from 'axios';
-import Button from 'react-bootstrap/Button';
+
 
 export default class MarkTableRow extends Component {
 
@@ -31,14 +31,7 @@ export default class MarkTableRow extends Component {
                 <td>{this.props.obj.marks}</td>
                 <td>{this.props.obj.status}</td>
             
-                <td>
-                    <Link className="edit-link" to={"/edit-mark/" + this.props.obj._id}>
-                    <Button type="button" class="btn btn-success">Edit</Button>
-                    </Link>
-                    <Button onClick={this.deleteQuiz} size="vh" variant="danger">
-                    <i class="far fa-trash-alt"></i> 
-                        Delete</Button>
-                </td>
+                
             </tr>
 
         );
