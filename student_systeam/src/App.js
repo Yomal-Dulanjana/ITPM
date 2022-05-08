@@ -15,6 +15,7 @@ import QuizList from "./components/quiz-list.component";
 import CreateMark from "./components/create-mark.component";
 import EditMark from "./components/edit-mark.component";
 import MarkList from "./components/mark-list.component";
+import markPDF from "./components/marksPDF";
 
 
 function App() {
@@ -219,6 +220,7 @@ function App() {
                 <Route path="/create-mark" component={CreateMark} />
                 <Route path="/edit-mark/:id" component={EditMark} />
                 <Route path="/mark-list" component={MarkList} />
+                <Route path="/marksPDF" component={markPDF} />
               </Switch>
             </div>
           </Col>

@@ -32,7 +32,7 @@ export default class MarkList extends Component {
 
   filterContent(returns, searchTerm) {
     const result = returns.filter((list) =>
-      list.question_number.includes(searchTerm)
+      list.studentID.includes(searchTerm)
     );
     this.setState({ returns: result });
   }
@@ -90,6 +90,8 @@ export default class MarkList extends Component {
           </a>
         </button>
         &nbsp; &nbsp;
+        <button className="btn btn-success"><a href="/marksPDF" style={{textDecoration:'none',color:'white'}}> <i class="fas fa-book"></i>&nbsp;Genarate Report</a></button>
+
       </div>
     );
   }
