@@ -6,8 +6,18 @@ let dbConfig = require('./database/db');
 
 // Express Rout
 const quizRoute = require('../backend/routes/quiz.route')
+
 const answerRoute = require('../backend/routes/answer.route')
+const subjectRoute = require('../backend/routes/subject.route')
+const timeRoute = require('../backend/routes/time.route')
+
 const markRoute = require('../backend/routes/mark.route')
+const examRoute = require('./routes/exam.route')
+const gradeRoute = require('./routes/grade.route')
+const teacherRoute = require('../backend/routes/teacher.route')
+const studentRoute = require('../backend/routes/student.route')
+
+
 
 
 // Connecting mongoDB
@@ -28,8 +38,19 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cors());
 app.use('/quizs', quizRoute)
+app.use('/subjects',subjectRoute)
+app.use('/time',timeRoute)
 app.use('/marks', markRoute)
+
 app.use('/answers', answerRoute)
+
+app.use('/exams', examRoute)
+app.use('/grades', gradeRoute)
+app.use('/teachers', teacherRoute)
+app.use('/students', studentRoute)
+
+
+
 
 // PORT
 const port = process.env.PORT || 8070;

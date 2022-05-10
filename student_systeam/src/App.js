@@ -14,10 +14,41 @@ import QuizList from "./components/quiz-list.component";
 import StudentQuiz from "./components/student-quiz.component";
 import Answer from "./components/answer-list.component";
 
+
 import CreateMark from "./components/create-mark.component";
 import EditMark from "./components/edit-mark.component";
 import MarkList from "./components/mark-list.component";
 import markPDF from "./components/marksPDF";
+
+import CreateSubject from "./components/create-subject.component";
+import EditSubject from "./components/edit-subject.component";
+import SubjectList from "./components/subject-list.component";
+
+import CreateTime from "./components/create-time.component";
+import EditTime from "./components/edit-time.component";
+import TimeList from "./components/time-list.component";
+import timePDF from "./components/timePDF";
+
+import CreateExam from "./components/create-exam.component";
+import EditExam from "./components/edit-exam.component";
+import ExamList from "./components/exam-list.component";
+import examPDF from "./components/examPDF";
+
+import CreateGrade from "./components/create-grade.component";
+import EditGrade from "./components/edit-grade.component";
+import GradeList from "./components/grade-list.component";
+import gradePDF from "./components/gradePDF";
+
+import CreateTeacher from "./components/create-teacher.component";
+import EditTeacher from "./components/edit-teacher.component";
+import TeacherList from "./components/teacher-list.component";
+import teacherPDF from "./components/teacherPDF";
+
+import CreateStudent from "./components/create-student.component";
+import EditStudent from "./components/edit-student.component";
+import StudentList from "./components/student-list.component";
+import studentPDF from "./components/studentPDF";
+
 
 
 function App() {
@@ -185,18 +216,18 @@ function App() {
                   <br />
                   <a
                     className="nav-link active"
-                    href="/return-list"
+                    href="/subject-list"
                     style={{ color: "#000000" }}
                   >
-                    <h5>Return</h5>
+                    <h5>Subject</h5>
                   </a>
                   <br />
                   <a
                     className="nav-link active"
-                    href="/supply-list"
+                    href="/time-list"
                     style={{ color: "#000000" }}
                   >
-                    <h5>Supplier</h5>
+                    <h5>Time Table</h5>
                   </a>
                   <br />
                 </div>
@@ -227,7 +258,48 @@ function App() {
                 <Route path="/create-mark" component={CreateMark} />
                 <Route path="/edit-mark/:id" component={EditMark} />
                 <Route path="/mark-list" component={MarkList} />
+
                 <Route path="/marksPDF" component={markPDF} />
+
+
+                <Route exact path='/' component={CreateExam} />
+                <Route path="/create-exam" component={CreateExam} />
+                <Route path="/edit-exam/:id" component={EditExam} />
+                <Route path="/Exam-list" component={ExamList} />
+                <Route path="/examPDF" component={examPDF} />
+
+                <Route exact path='/' component={CreateGrade} />
+                <Route path="/create-grade" component={CreateGrade} />
+                <Route path="/edit-grade/:id" component={EditGrade} />
+                <Route path="/Grade-list" component={GradeList} />
+                <Route path="/gradePDF" component={gradePDF} />
+
+                <Route exact path="/" component={CreateSubject} />
+                <Route path="/create-subject" component={CreateSubject} />
+                <Route path="/edit-subject/:id" component={EditSubject} />
+                <Route path="/subject-list" component={SubjectList} />
+                
+                <Route exact path="/" component={CreateTime} />
+                <Route path="/create-time" component={CreateTime} />
+                <Route path="/edit-time/:id" component={EditTime} />
+                <Route path="/time-list" component={TimeList} />
+                <Route path="/timePDF" component={timePDF} />
+
+                <Route exact path='/' component={CreateStudent} />
+                <Route path="/create-student" component={CreateStudent} />
+                <Route path="/edit-student/:id" component={EditStudent} />
+                <Route path="/student-list" component={StudentList} />
+                <Route path="/studentPDF" component={studentPDF} />
+
+                <Route exact path='/' component={CreateTeacher} />
+                <Route path="/create-teacher" component={CreateTeacher} />
+                <Route path="/edit-teacher/:id" component={EditTeacher} />
+                <Route path="/teacher-list" component={TeacherList} />      
+                <Route path="/teacherPDF" component={teacherPDF} /> 
+                 
+
+
+
               </Switch>
             </div>
           </Col>
