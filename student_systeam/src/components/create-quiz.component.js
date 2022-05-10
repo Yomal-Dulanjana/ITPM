@@ -74,7 +74,7 @@ export default class CreateQuiz extends Component {
       corret_answer: this.state.corret_answer
      
     };
-    axios.post('http://localhost:8070/Quiz/create-quiz', quizObject)
+    axios.post('http://localhost:8070/quizs/create-quiz', quizObject)
       .then(res => console.log(res.data));
 
     this.setState({ question_number: '', question: '', answer_1: '', answer_2: '', answer_3: '', answer_4:'', corret_answer:'' })

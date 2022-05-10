@@ -57,7 +57,7 @@ export default class CreateMark extends Component {
       .then(res => console.log(res.data));
 
     this.setState({ studentID: '', name: '', marks: '', status: ''})
-    this.props.history.push('/mark-list')
+    this.props.history.push('/answer-list')
   }
   
 
