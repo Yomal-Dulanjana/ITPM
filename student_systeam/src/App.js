@@ -11,6 +11,8 @@ import home from "./home";
 import CreateQuiz from "./components/create-quiz.component";
 import EditQuiz from "./components/edit-quiz.component";
 import QuizList from "./components/quiz-list.component";
+import StudentQuiz from "./components/student-quiz.component";
+import Answer from "./components/answer-list.component";
 
 
 import CreateMark from "./components/create-mark.component";
@@ -246,6 +248,11 @@ function App() {
                 <Route path="/create-quiz" component={CreateQuiz} />
                 <Route path="/edit-quiz/:id" component={EditQuiz} />
                 <Route path="/quiz-list" component={QuizList} />
+
+                <Route exact path="/" component={StudentQuiz} />
+                <Route path="/student-quiz" component={StudentQuiz} />
+                <Route path="/answer-list" component={Answer} />
+
 
                 <Route exact path="/" component={CreateMark} />
                 <Route path="/create-mark" component={CreateMark} />

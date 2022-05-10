@@ -90,7 +90,7 @@ export default class EditMark extends Component {
         <Form onSubmit={this.onSubmit}>
           <br></br>
           <br></br>
-          &nbsp;&nbsp;<h3>ADD MARKS</h3>
+          &nbsp;&nbsp;<h3>UPDATE MARKS</h3>
           <Form.Group controlId="StudentID">
             <Form.Label>Student ID</Form.Label>
             <Form.Control
