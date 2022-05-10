@@ -12,6 +12,8 @@ import home from "./home";
 import CreateQuiz from "./components/create-quiz.component";
 import EditQuiz from "./components/edit-quiz.component";
 import QuizList from "./components/quiz-list.component";
+import StudentQuiz from "./components/student-quiz.component";
+import Answer from "./components/answer-list.component";
 
 
 import CreateMark from "./components/create-mark.component";
@@ -55,6 +57,7 @@ import studentPDF from "./components/studentPDF";
 
 
 function App() {
+
   return (<Router>
 
     <nav className="navbar navbar-dark bg-dark fixed-top" style={{backgroundColor:'#ADD8E6'}}>  
@@ -119,6 +122,11 @@ function App() {
         </form>
         <br>
         </br>
+
+  return (
+    <Router>
+      <nav className="navbar navbar-dark bg-dark fixed-top" style={{ backgroundColor: "#FFFFFF" }} >
+
         <div className="container-fluid">
            <div className="navbar-nav">
              <a className="nav-link active" href="/exam-list" style={{color:"#000000"}}><h5>Exam</h5></a><br/>
@@ -147,6 +155,11 @@ function App() {
                 <Route path="/create-quiz" component={CreateQuiz} />
                 <Route path="/edit-quiz/:id" component={EditQuiz} />
                 <Route path="/quiz-list" component={QuizList} />
+
+                <Route exact path="/" component={StudentQuiz} />
+                <Route path="/student-quiz" component={StudentQuiz} />
+                <Route path="/answer-list" component={Answer} />
+
 
                 <Route exact path="/" component={CreateMark} />
                 <Route path="/create-mark" component={CreateMark} />

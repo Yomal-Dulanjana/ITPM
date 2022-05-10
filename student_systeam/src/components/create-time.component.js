@@ -113,7 +113,7 @@ export default class CreateTime extends Component {
 
         <br/>
         <Button variant="outline-success" size="lg" block="block" type="submit">
-        <i class="fa fa-plus-square" aria-hidden="true"></i>&nbsp; ADD TIME
+        <i class="fa fa-timetable" aria-hidden="true"></i>&nbsp; ADD TIME
         </Button>
         
       </Form>
