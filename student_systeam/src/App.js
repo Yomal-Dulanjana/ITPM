@@ -38,6 +38,7 @@ import CreateGrade from "./components/create-grade.component";
 import EditGrade from "./components/edit-grade.component";
 import GradeList from "./components/grade-list.component";
 import gradePDF from "./components/gradePDF";
+import GradeStudentList from "./components/gradestudent-list.component";
 
 import CreateTeacher from "./components/create-teacher.component";
 import EditTeacher from "./components/edit-teacher.component";
@@ -270,6 +271,7 @@ function App() {
                 <Route path="/edit-grade/:id" component={EditGrade} />
                 <Route path="/Grade-list" component={GradeList} />
                 <Route path="/gradePDF" component={gradePDF} />
+                <Route path="/GradeStudent-list" component={GradeStudentList} />
 
                 <Route exact path="/" component={CreateSubject} />
                 <Route path="/create-subject" component={CreateSubject} />
