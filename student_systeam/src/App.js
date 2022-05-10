@@ -25,10 +25,7 @@ import timePDF from "./components/timePDF";
 function App() {
   return (
     <Router>
-      <nav
-        className="navbar navbar-dark bg-dark fixed-top"
-        style={{ backgroundColor: "#FFFFFF" }}
-      >
+      <nav className="navbar navbar-dark bg-dark fixed-top" style={{ backgroundColor: "#FFFFFF" }} >
         <div className="container-fluid">
           <a className="navbar-brand" href="/home"  style={{ color: "#FFFFFF"  }}>
             <h3>  STUDENT MANAGEMENT SYSTEM</h3>

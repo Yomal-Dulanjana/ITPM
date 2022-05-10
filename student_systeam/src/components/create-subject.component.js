@@ -101,7 +101,7 @@ export default class CreateSubject extends Component {
 
         <br/>
         <Button variant="outline-success" size="lg" block="block" type="submit">
-        <i class="fa fa-plus-square" aria-hidden="true"></i>&nbsp; ADD SUBJECTS
+        <i class="fa fa-book" aria-hidden="true"></i>&nbsp; ADD SUBJECTS
         </Button>
         
       </Form>
