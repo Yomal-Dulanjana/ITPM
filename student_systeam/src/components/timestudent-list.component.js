@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import axios from 'axios';
 import Table from 'react-bootstrap/Table';
-import SubjectTableRow from './SubjectTableRow';
+import TimeStudentTableRow from './TimeStudentTableRow';
 
 
-export default class SubjectList extends Component {
+export default class TimeStudentList extends Component {
 
   constructor(props) {
     super(props)
@@ -14,7 +14,7 @@ export default class SubjectList extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:8070/subjects/')
+    axios.get('http://localhost:8070/time/')
       .then(res => {
         this.setState({
           returns: res.data
@@ -27,12 +27,12 @@ export default class SubjectList extends Component {
 
   DataTable() {
     return this.state.returns.map((res, i) => {
-      return <SubjectTableRow obj={res} key={i} />;
+      return <TimeStudentTableRow obj={res} key={i} />;
     });
   }
 
   filterContent(returns, searchTerm){
-    const result= returns.filter((list)=> list.sname.includes(searchTerm));
+    const result= returns.filter((list)=> list.day.includes(searchTerm));
     this.setState({ returns: result });
   }
 
@@ -40,7 +40,7 @@ export default class SubjectList extends Component {
 
     console.log(e.currentTarget.value);
     const searchTerm = e.currentTarget.value;
-    axios.get('http://localhost:8070/subjects/')
+    axios.get('http://localhost:8070/time/')
     .then(res =>{
       const returns = res.data;
       this.setState({ returns });
@@ -53,7 +53,7 @@ export default class SubjectList extends Component {
     return (<div className="table-wrapper">
     <br/><br/> 
     <br/>
-     <h2><i class=""></i>&nbsp;Subject</h2><br/>
+     <h2><i class=""></i>&nbsp;Time Table</h2><br/>
     <form className="md-3">
           <input className="form-control " type="search" placeholder="Search" aria-label="Search"  style={{width: "670px"}}  onChange={this.handleTextSearch}></input>
           
@@ -65,19 +65,23 @@ export default class SubjectList extends Component {
       
         <thead>
           <tr>
-            <th>Subject Name</th>
-            <th>Subject Code</th>
-            <th>Teacher's Name</th>
+            <th>Day</th>
+            <th>Subject </th>
             <th>Class</th>
-            <th>Language</th>
-            <th>Action</th>
+            <th>Teacher's Name</th>
+            <th>Time</th>
+            <th>Date</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
           {this.DataTable()}
         </tbody>
       </Table>
-      <button className="btn btn-success"><a href="/create-subject" style={{textDecoration:'none',color:'white'}}><i class="fas fa-add"></i>&nbsp;Add Subject</a></button>
+      <button className="btn btn-success"><a href="/home" style={{textDecoration:'none',color:'white'}}><i class="fas fa-add"></i>&nbsp;Add Time</a></button>
+      &nbsp;
+      &nbsp;
+      <button className="btn btn-success"><a href="/timePDF" style={{textDecoration:'none',color:'white'}}><i class="fas fa-book"></i>&nbsp;Genarate Report</a></button>
     </div>);
   }
 }
