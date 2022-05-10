@@ -5,12 +5,15 @@ function home() {
     <div>
       <div className="home-img">
         <img
-          src="./img/home1.jpg"
+          src="img/bg.png"
           alt="Cinque Terre"
-          width="2142"
-          height="1010"
-          style={{ left: -420, top: 0, position: "absolute" }}
+          width="2225"
+          height="1060"
+          style={{ left:-510,top: -40, position: "absolute" }}
         />
+      </div>
+      <div>
+      
       </div>
       {/*<div classname="logo">
       <img src="img/Logo.png" alt="Cinque Terre"
@@ -19,38 +22,20 @@ function home() {
           style={{ left: 20, top: 80, position: "absolute" }}/>
   </div>*/}
 
-      
 
-      <h4 className="hh14">
-        Vision
-      </h4>
-      <h4 className="hh13">
-      Creating a creative , balance personified person rich with good intentions ,
-      
-       positive thoughts and theoretical knowledge who is able to build a better tomorrow.
-      </h4>
 
-      <h4 className="hh19">
-        Mission
-      </h4>
-      <h4 className="hh20">
-      Hand overing a person to the society who can live successfully in the global 
-      village whether it is local or international.
-      </h4>
 
-      {/*<button className="hh15">
-        
-      </button>
+      <h4 className="hh14"></h4>
 
-      <button className="hh16">
-        
-      </button>
+      <h4 className="hh19"></h4>
 
-      <button className="hh17">
-      </button>
+      <button className="hh15"><i class="fab fa-facebook"></i></button>
 
-      <button className="hh18">
-</button>*/}
+      <button className="hh16"><i class="fab fa-instagram"></i></button>
+
+      <button className="hh17"><i class="fab fa-twitter-square"></i></button>
+
+      <button className="hh18"><i class="fab fa-youtube"></i></button>
     </div>
   );
 }
