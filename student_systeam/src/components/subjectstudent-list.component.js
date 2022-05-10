@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import axios from 'axios';
 import Table from 'react-bootstrap/Table';
-import SubjectTableRow from './SubjectTableRow';
+import SubjectStudentTableRow from './SubjectStudentTableRow';
 
 
-export default class SubjectList extends Component {
+export default class SubjectStudentList extends Component {
 
   constructor(props) {
     super(props)
@@ -27,7 +27,7 @@ export default class SubjectList extends Component {
 
   DataTable() {
     return this.state.returns.map((res, i) => {
-      return <SubjectTableRow obj={res} key={i} />;
+      return <SubjectStudentTableRow obj={res} key={i} />;
     });
   }
 
@@ -53,7 +53,7 @@ export default class SubjectList extends Component {
     return (<div className="table-wrapper">
     <br/><br/> 
     <br/>
-     <h2><i class=""></i>&nbsp;Subject</h2><br/>
+     <h2><i class=""></i>&nbsp;Subject Details</h2><br/>
     <form className="md-3">
           <input className="form-control " type="search" placeholder="Search" aria-label="Search"  style={{width: "670px"}}  onChange={this.handleTextSearch}></input>
           
@@ -70,14 +70,13 @@ export default class SubjectList extends Component {
             <th>Teacher's Name</th>
             <th>Class</th>
             <th>Language</th>
-            <th>Action</th>
           </tr>
         </thead>
         <tbody>
           {this.DataTable()}
         </tbody>
       </Table>
-      <button className="btn btn-success"><a href="/create-subject" style={{textDecoration:'none',color:'white'}}><i class="fas fa-add"></i>&nbsp;Add Subject</a></button>
+      <button className="btn btn-success"><a href="/home" style={{textDecoration:'none',color:'white'}}><i class="fas fa-undo"></i>&nbsp;Add Subject</a></button>
     </div>);
   }
 }
