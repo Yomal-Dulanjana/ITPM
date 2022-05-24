@@ -1,25 +1,15 @@
 import "./home.css";
+import Header from "./components/Header";
 
 function home() {
   return (
+   
     <div>
-      <div className="home-img">
-        <img
-          src="./img/home1.jpg"
-          alt="Cinque Terre"
-          width="2142"
-          height="1010"
-          style={{ left: -420, top: 0, position: "absolute" }}
-        />
-      </div>
-      {/*<div classname="logo">
-      <img src="img/Logo.png" alt="Cinque Terre"
-          width="920"
-          height="591"
-          style={{ left: 20, top: 80, position: "absolute" }}/>
-  </div>*/}
+       <Header/>
+       <div className="img">
 
-      
+
+       
 
       <h4 className="hh14">
         Vision
@@ -51,6 +41,7 @@ function home() {
 
       <button className="hh18">
 </button>*/}
+</div>
     </div>
   );
 }
