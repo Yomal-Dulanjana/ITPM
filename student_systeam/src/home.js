@@ -5,6 +5,7 @@ function home() {
   return (
    
     <div>
+
        <Header/>
        <div className="img">
 
@@ -42,6 +43,8 @@ function home() {
       <button className="hh18">
 </button>*/}
 </div>
+
+
     </div>
   );
 }

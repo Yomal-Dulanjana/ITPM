@@ -23,10 +23,12 @@ import markPDF from "./components/marksPDF";
 import CreateSubject from "./components/create-subject.component";
 import EditSubject from "./components/edit-subject.component";
 import SubjectList from "./components/subject-list.component";
+import SubjectStudentList from "./components/subjectstudent-list.component";
 
 import CreateTime from "./components/create-time.component";
 import EditTime from "./components/edit-time.component";
 import TimeList from "./components/time-list.component";
+import TimeStudentList from "./components/timestudent-list.component";
 import timePDF from "./components/timePDF";
 
 import CreateExam from "./components/create-exam.component";
@@ -38,6 +40,7 @@ import CreateGrade from "./components/create-grade.component";
 import EditGrade from "./components/edit-grade.component";
 import GradeList from "./components/grade-list.component";
 import gradePDF from "./components/gradePDF";
+import GradeStudentList from "./components/gradestudent-list.component";
 
 import CreateTeacher from "./components/create-teacher.component";
 import EditTeacher from "./components/edit-teacher.component";
@@ -50,6 +53,13 @@ import StudentList from "./components/student-list.component";
 import studentPDF from "./components/studentPDF";
 
 
+
+
+
+function App() {
+  return (
+    <Router>
+      
 
 
 
@@ -94,16 +104,19 @@ function App() {
                 <Route path="/edit-grade/:id" component={EditGrade} />
                 <Route path="/Grade-list" component={GradeList} />
                 <Route path="/gradePDF" component={gradePDF} />
+                <Route path="/GradeStudent-list" component={GradeStudentList} />
 
                 <Route exact path="/" component={CreateSubject} />
                 <Route path="/create-subject" component={CreateSubject} />
                 <Route path="/edit-subject/:id" component={EditSubject} />
                 <Route path="/subject-list" component={SubjectList} />
+                <Route path="/subjectstudent-list" component={SubjectStudentList} />
                 
                 <Route exact path="/" component={CreateTime} />
                 <Route path="/create-time" component={CreateTime} />
                 <Route path="/edit-time/:id" component={EditTime} />
                 <Route path="/time-list" component={TimeList} />
+                <Route path="/timestudent-list" component={TimeStudentList} />
                 <Route path="/timePDF" component={timePDF} />
 
                 <Route exact path='/' component={CreateStudent} />
