@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import axios from 'axios';
 import Table from 'react-bootstrap/Table';
-import SubjectTableRow from './SubjectTableRow';
+import GradeTableRowStudent from './GradeTableRowStudent';
 
 
-export default class SubjectList extends Component {
+export default class GradeList extends Component {
 
   constructor(props) {
     super(props)
@@ -14,7 +14,7 @@ export default class SubjectList extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:8070/subjects/')
+    axios.get('http://localhost:8070/grades/')
       .then(res => {
         this.setState({
           returns: res.data
@@ -27,12 +27,12 @@ export default class SubjectList extends Component {
 
   DataTable() {
     return this.state.returns.map((res, i) => {
-      return <SubjectTableRow obj={res} key={i} />;
+      return <GradeTableRowStudent obj={res} key={i} />;
     });
   }
 
   filterContent(returns, searchTerm){
-    const result= returns.filter((list)=> list.sname.includes(searchTerm));
+    const result= returns.filter((list)=> list.Index_Num.includes(searchTerm));
     this.setState({ returns: result });
   }
 
@@ -40,7 +40,7 @@ export default class SubjectList extends Component {
 
     console.log(e.currentTarget.value);
     const searchTerm = e.currentTarget.value;
-    axios.get('http://localhost:8070/subjects/')
+    axios.get('http://localhost:8070/grades/')
     .then(res =>{
       const returns = res.data;
       this.setState({ returns });
@@ -49,35 +49,46 @@ export default class SubjectList extends Component {
     })
   }
 
+
+
+
   render() {
     return (<div className="table-wrapper">
-    <br/><br/> 
-    <br/>
-     <h2><i class=""></i>&nbsp;Subject</h2><br/>
-    <form className="md-3">
-          <input className="form-control " type="search" placeholder="Search" aria-label="Search"  style={{width: "670px"}}  onChange={this.handleTextSearch}></input>
+       <br></br>
+      <br></br>
+      <br></br>
+      <h2><i class="fas fa-graduation-cap"></i>&nbsp;Grade Details List</h2><br/>
+
+      <form className="md-3">
+          <input className="form-control mt-1" type="search" placeholder="Search" aria-label="Search"   onChange={this.handleTextSearch}></input>
           
         </form>
         &nbsp;&nbsp;
-    
 
-    <Table striped bordered hover variant="dark">
+        <Table striped bordered hover variant="dark">
       
         <thead>
           <tr>
-            <th>Subject Name</th>
-            <th>Subject Code</th>
-            <th>Teacher's Name</th>
-            <th>Class</th>
-            <th>Language</th>
-            <th>Action</th>
+            <th>Index Number</th>
+            <th>Student Name</th>
+            <th>Grade</th>
+            <th>Section</th>
+            <th>Subject 01</th>
+            <th>Subject 02</th>
+            <th>Subject 03</th>
+            <th>Average</th>
+            <th>Place</th>
+            <th>Status</th>
+            <th></th>
+
+            
+            <br></br>
           </tr>
         </thead>
         <tbody>
           {this.DataTable()}
         </tbody>
       </Table>
-      <button className="btn btn-success"><a href="/create-subject" style={{textDecoration:'none',color:'white'}}><i class="fas fa-add"></i>&nbsp;Add Subject</a></button>
     </div>);
   }
 }
