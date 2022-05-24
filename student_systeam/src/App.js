@@ -56,9 +56,6 @@ import studentPDF from "./components/studentPDF";
 
 
 
-function App() {
-  return (
-    <Router>
       
 
 
