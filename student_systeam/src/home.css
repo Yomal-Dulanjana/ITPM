@@ -1,9 +1,12 @@
+
+
+
 .hh11 {
     color: white;
     font-size: 64px;
     position: absolute;
-    top: 30%;
-    left: 15%;
+    top: 40%;
+    left: -10%;
     font-family: Goudy Old Style;
     font-weight: 600;
     font-size: 70px;
@@ -21,7 +24,7 @@
   }
   
   .hh13 {
-    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgb(173, 52, 52); /* Fallback color */
     background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
     color: white;
     font-weight: bold;
@@ -40,7 +43,7 @@
     
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
-    color: white;
+    color: rgb(255, 255, 255);
     font-weight: bold;
     border: 5px solid #f1f1f1;
     position: absolute;
@@ -53,13 +56,13 @@
     text-align: center;
   }
   .hh14 {
-    color: white;
+    color: rgb(0, 0, 0);
   
     font-size: 50px;
   
     position: absolute;
   
-    top: 43%;
+    top: 41%;
   
     left: 5.6%;
   
@@ -69,7 +72,7 @@
   }
   
   .hh19 {
-    color: white;
+    color: rgb(0, 0, 0);
   
     font-size: 50px;
   
