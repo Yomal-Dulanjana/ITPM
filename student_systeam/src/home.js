@@ -6,7 +6,23 @@ function home() {
    
     <div>
        <Header/>
-       <div className="img">
+       <div className="home-img">
+
+        <img
+
+          src="./img/About1.jpg"
+
+          alt="Cinque Terre"
+
+          width="2057"
+
+          height="989"
+
+          style={{ left:-510,top: -40, position: "absolute" }}
+
+        />
+
+      </div>
 
 
        
@@ -28,11 +44,11 @@ function home() {
       village whether it is local or international.
       </h4>
 
-      {/*<button className="hh15">
-        
+      <button className="hh15">
+        STUDENT
       </button>
 
-      <button className="hh16">
+      {/*<button className="hh16">
         
       </button>
 
@@ -42,7 +58,8 @@ function home() {
       <button className="hh18">
 </button>*/}
 </div>
-    </div>
+  
+    
   );
 }
 
