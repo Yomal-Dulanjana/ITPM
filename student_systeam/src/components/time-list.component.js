@@ -53,7 +53,7 @@ export default class TimeList extends Component {
     return (<div className="table-wrapper">
     <br/><br/> 
     <br/>
-     <h2><i class=""></i>&nbsp;Time Table</h2><br/>
+     <h2><i class="far fa-comment-alt"></i>&nbsp;Time Table</h2><br/>
     <form className="md-3">
           <input className="form-control " type="search" placeholder="Search" aria-label="Search"  style={{width: "670px"}}  onChange={this.handleTextSearch}></input>
           
