@@ -53,9 +53,23 @@ function profile() {
       </button>
 
       <button className="hh17">
+      <a 
+              href="/GradeStudent-list"
+                style={{ textDecoration: "none", color: "Black" }}
+                >
+                {" "}
+            <i class="fas fa-book"></i>&nbsp;GRADE
+              </a>
       </button>
 
       <button className="hh18">
+      <a 
+              href="/timestudent-list"
+                style={{ textDecoration: "none", color: "Black" }}
+                >
+                {" "}
+            <i class="fas fa-book"></i>&nbsp;TIME TABLE
+              </a>
 </button>
 </div>
 
