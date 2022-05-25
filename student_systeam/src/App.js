@@ -8,6 +8,8 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import home from "./home";
+import sprofile from "./sprofile";
+
 import CreateQuiz from "./components/create-quiz.component";
 import EditQuiz from "./components/edit-quiz.component";
 import QuizList from "./components/quiz-list.component";
@@ -80,6 +82,9 @@ function App() {
                 <Route exact path="/" component={StudentQuiz} />
                 <Route path="/student-quiz" component={StudentQuiz} />
                 <Route path="/answer-list" component={Answer} />
+                <Route path="/sprofile" component={sprofile} />
+
+
 
 
                 <Route exact path="/" component={CreateMark} />
