@@ -106,14 +106,14 @@
   }
   
   .hh16 {
-    border-radius: 50%;
+    border-radius: 10%;
     font-size: 27px;
   
     position: absolute;
   
-    top: 90%;
+    top: 20%;
   
-    right: 16%;
+    right: 12%;
   
     font-weight: 510;
   

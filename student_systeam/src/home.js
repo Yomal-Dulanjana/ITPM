@@ -45,8 +45,15 @@ function home() {
       village whether it is local or international.
       </h4>
 
-      <button className="hh15">
-        STUDENT
+      <button className="hh15" >
+        <a 
+              href="/sprofile"
+                style={{ textDecoration: "none", color: "Black" }}
+                >
+                {" "}
+            <i class="fas fa-book"></i>&nbsp;STUDENT
+              </a>
+        
       </button>
 
       {/*<button className="hh16">
