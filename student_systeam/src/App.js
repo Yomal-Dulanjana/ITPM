@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import home from "./home";
 import sprofile from "./sprofile";
+import aprofile from "./aprofile";
 
 import CreateQuiz from "./components/create-quiz.component";
 import EditQuiz from "./components/edit-quiz.component";
@@ -83,6 +84,7 @@ function App() {
                 <Route path="/student-quiz" component={StudentQuiz} />
                 <Route path="/answer-list" component={Answer} />
                 <Route path="/sprofile" component={sprofile} />
+                <Route path="/aprofile" component={aprofile} />
 
 
 
