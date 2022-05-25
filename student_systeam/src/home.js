@@ -1,25 +1,32 @@
 import "./home.css";
+import Header from "./components/Header";
 
 function home() {
   return (
+   
     <div>
-      <div className="home-img">
-        <img
-          src="./img/home1.jpg"
-          alt="Cinque Terre"
-          width="2142"
-          height="1010"
-          style={{ left: -420, top: 0, position: "absolute" }}
-        />
-      </div>
-      {/*<div classname="logo">
-      <img src="img/Logo.png" alt="Cinque Terre"
-          width="920"
-          height="591"
-          style={{ left: 20, top: 80, position: "absolute" }}/>
-  </div>*/}
 
-      
+       <Header/>
+       <div className="home-img">
+
+        <img
+
+          src="./img/About1.jpg"
+
+          alt="Cinque Terre"
+
+          width="2057"
+
+          height="989"
+
+          style={{ left:-510,top: -40, position: "absolute" }}
+
+        />
+
+      </div>
+
+
+       
 
       <h4 className="hh14">
         Vision
@@ -38,11 +45,18 @@ function home() {
       village whether it is local or international.
       </h4>
 
-      {/*<button className="hh15">
+      <button className="hh15" >
+        <a 
+              href="/sprofile"
+                style={{ textDecoration: "none", color: "Black" }}
+                >
+                {" "}
+            <i class="fas fa-book"></i>&nbsp;STUDENT
+              </a>
         
       </button>
 
-      <button className="hh16">
+      {/*<button className="hh16">
         
       </button>
 
@@ -51,7 +65,8 @@ function home() {
 
       <button className="hh18">
 </button>*/}
-    </div>
+</div>
+
   );
 }
 
