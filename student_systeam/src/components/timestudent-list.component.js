@@ -78,8 +78,7 @@ export default class TimeStudentList extends Component {
           {this.DataTable()}
         </tbody>
       </Table>
-      <button className="btn btn-success"><a href="/home" style={{textDecoration:'none',color:'white'}}><i class="fas fa-add"></i>&nbsp;Add Time</a></button>
-      &nbsp;
+      
       &nbsp;
       <button className="btn btn-success"><a href="/timePDF" style={{textDecoration:'none',color:'white'}}><i class="fas fa-book"></i>&nbsp;Genarate Report</a></button>
     </div>);
