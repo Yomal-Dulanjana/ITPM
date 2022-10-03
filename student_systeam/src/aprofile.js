@@ -53,11 +53,11 @@ function profile() {
 
       <button className="hh17">
       <a 
-              href="/student-list"
+              href="/answer-list"
                 style={{ textDecoration: "none", color: "Black" }}
                 >
                 {" "}
-            <i class="fas fa-book"></i>&nbsp;STUDENT
+            <i class="fas fa-book"></i>&nbsp;ANSWER
               </a>
       </button>
 
